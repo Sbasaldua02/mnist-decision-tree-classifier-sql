@@ -29,7 +29,7 @@ Para este experimento, trabajamos con un subconjunto de interés del dataset ori
 ### 3. Integración de SQL para Validación
 En lugar de depender únicamente de Pandas, utilizamos **SQL** para procesar los resultados del *K-Fold Cross Validation* (5 folds). Esto nos permitió agregar métricas de manera dinámica:
 
-"""sql
+"" sql
 /* Ejemplo de la lógica utilizada */
 SELECT 
     criterion, 
@@ -38,7 +38,7 @@ SELECT
     AVG(test_accuracies) as avg_test
 FROM resultados_folds
 GROUP BY criterion, alturas
-"""
+""
 ### 4. Modelo y Experimentación
 
 Para encontrar la configuración óptima, se realizó una búsqueda exhaustiva de hiperparámetros evaluando el desempeño del **DecisionTreeClassifier**:
